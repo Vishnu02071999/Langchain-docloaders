@@ -3,9 +3,7 @@ This repository demonstrates how to use LangChain Document Loaders to ingest dat
 
 # Overview
 
-The project contains 2 examples:
-
-1. PDF Document Loading
+The repository contains 3 examples:
 
 Uses PyPDFLoader to:
 
@@ -21,11 +19,20 @@ Uses TextLoader to:
 - Pass the loaded text to an OpenAI model.
 - Generate a concise summary using LangChain chains.
 
+Uses WebBaseLoader to:
+
+- Load content directly from a web page using its URL.
+- Extract the page's text content along with metadata (such as title, source URL, and description).
+- Convert the webpage into LangChain Document objects for further processing.
+- Pass the extracted content to an OpenAI model.
+
+
 # Technologies Used
 - LangChain
 - OpenAI GPT Models
 - PyPDFLoader
 - TextLoader
+- WebBaseLoader
 - Prompt Templates
 - Output Parsers
 - Python
@@ -38,6 +45,7 @@ By completing this project, you will learn:
 - What Document Loaders are in LangChain.
 - How to load PDF documents into LangChain.
 - How to load plain text files.
+- How to use WebBaseLoader to fetch and process website content.
 - How document content and metadata are stored.
 - How to connect loaded documents to LLM workflows.
 - How to build simple document summarization pipelines.
