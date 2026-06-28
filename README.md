@@ -26,6 +26,14 @@ Uses WebBaseLoader to:
 - Convert the webpage into LangChain Document objects for further processing.
 - Pass the extracted content to an OpenAI model.
 
+Uses Directory loader to:
+
+- Load all PDF files from the books directory.
+- Automatically identify files matching the *.pdf pattern.
+- Use PyPDFLoader to extract the text and metadata from each PDF.
+- Lazily load documents one at a time for memory-efficient processing.
+- Iterate through each loaded document and print its metadata (such as source file and page number).
+
 
 # Technologies Used
 - LangChain
@@ -33,6 +41,7 @@ Uses WebBaseLoader to:
 - PyPDFLoader
 - TextLoader
 - WebBaseLoader
+- DirectoryLoader
 - Prompt Templates
 - Output Parsers
 - Python
@@ -46,6 +55,7 @@ By completing this project, you will learn:
 - How to load PDF documents into LangChain.
 - How to load plain text files.
 - How to use WebBaseLoader to fetch and process website content.
+- How to use DirectoryLoader
 - How document content and metadata are stored.
 - How to connect loaded documents to LLM workflows.
 - How to build simple document summarization pipelines.
